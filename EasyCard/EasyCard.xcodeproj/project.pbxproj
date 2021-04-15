@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D86F16932626DA9800F97E98 /* EasyCardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16922626DA9800F97E98 /* EasyCardApp.swift */; };
-		D86F16952626DA9800F97E98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16942626DA9800F97E98 /* ContentView.swift */; };
+		D86F16952626DA9800F97E98 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16942626DA9800F97E98 /* Main.swift */; };
 		D86F16972626DA9900F97E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86F16962626DA9900F97E98 /* Assets.xcassets */; };
 		D86F169A2626DA9900F97E98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86F16992626DA9900F97E98 /* Preview Assets.xcassets */; };
+		D86F16AA2626E23E00F97E98 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16A92626E23E00F97E98 /* Item.swift */; };
+		D86F16B02626E60200F97E98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16AF2626E60200F97E98 /* Global.swift */; };
+		D86F16B32626E86C00F97E98 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16B22626E86C00F97E98 /* Card.swift */; };
+		D86F16B7262744AB00F97E98 /* UserDefaultPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16B6262744AB00F97E98 /* UserDefaultPlus.swift */; };
+		D86F16BC2627565B00F97E98 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16BB2627565B00F97E98 /* CardList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D86F168F2626DA9800F97E98 /* EasyCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86F16922626DA9800F97E98 /* EasyCardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyCardApp.swift; sourceTree = "<group>"; };
-		D86F16942626DA9800F97E98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D86F16942626DA9800F97E98 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		D86F16962626DA9900F97E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D86F16992626DA9900F97E98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D86F169B2626DA9900F97E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86F16A92626E23E00F97E98 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D86F16AF2626E60200F97E98 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		D86F16B22626E86C00F97E98 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D86F16B6262744AB00F97E98 /* UserDefaultPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPlus.swift; sourceTree = "<group>"; };
+		D86F16BB2627565B00F97E98 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +62,11 @@
 		D86F16912626DA9800F97E98 /* EasyCard */ = {
 			isa = PBXGroup;
 			children = (
+				D86F16A42626DBBF00F97E98 /* Utils */,
+				D86F16A32626DBB100F97E98 /* Model */,
+				D86F16A22626DBA200F97E98 /* View */,
 				D86F16922626DA9800F97E98 /* EasyCardApp.swift */,
-				D86F16942626DA9800F97E98 /* ContentView.swift */,
+				D86F16942626DA9800F97E98 /* Main.swift */,
 				D86F16962626DA9900F97E98 /* Assets.xcassets */,
 				D86F169B2626DA9900F97E98 /* Info.plist */,
 				D86F16982626DA9900F97E98 /* Preview Content */,
@@ -67,6 +80,32 @@
 				D86F16992626DA9900F97E98 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D86F16A22626DBA200F97E98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D86F16B22626E86C00F97E98 /* Card.swift */,
+				D86F16BB2627565B00F97E98 /* CardList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D86F16A32626DBB100F97E98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D86F16A92626E23E00F97E98 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D86F16A42626DBBF00F97E98 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D86F16AF2626E60200F97E98 /* Global.swift */,
+				D86F16B6262744AB00F97E98 /* UserDefaultPlus.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D86F16952626DA9800F97E98 /* ContentView.swift in Sources */,
+				D86F16B02626E60200F97E98 /* Global.swift in Sources */,
+				D86F16AA2626E23E00F97E98 /* Item.swift in Sources */,
+				D86F16B7262744AB00F97E98 /* UserDefaultPlus.swift in Sources */,
+				D86F16B32626E86C00F97E98 /* Card.swift in Sources */,
+				D86F16952626DA9800F97E98 /* Main.swift in Sources */,
 				D86F16932626DA9800F97E98 /* EasyCardApp.swift in Sources */,
+				D86F16BC2627565B00F97E98 /* CardList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
