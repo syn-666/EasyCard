@@ -15,13 +15,11 @@ struct Item:Codable,Identifiable{
     var background:String
     var time:String = formatter.string(from: Date())
     var icon:String
+    
 }
 
-var defaultItems = [
-    Item(title: "聚餐", background: "Card1", icon: "Logo1"),
-    Item(title: "看电影", background: "Card2", icon: "Logo2"),
-    Item(title: "学习", background: "Card3", icon: "Logo3")
-]
+
+var defaultItems:[Item] = []
 
 class UserData: ObservableObject {
     let objectWillChange = PassthroughSubject<UserData,Never>()
@@ -33,11 +31,9 @@ class UserData: ObservableObject {
         }
     }
     
-//    @Published var islog:Bool = UserDefaults.standard.bool(forKey: "log"){
-//        didSet{
-//            UserDefaults.standard.set(islog, forKey: "log")
-//        }
-//    }
+    var unCom:[Item]{
+        items.filter{!$0.isDone}
+    }
     
 }
 

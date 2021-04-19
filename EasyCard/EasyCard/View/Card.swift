@@ -16,44 +16,48 @@ struct Card: View {
     @Binding var moveFlag:Bool
     
     var body: some View {
-        VStack(alignment: .center) {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 10.0){
-                    Text(item.title)
-                        .font(.system(size: 30, weight: .bold))
-                        .foregroundColor(Color.white)
-                        .lineLimit(2)
-                        .font(.caption)
-                    Text(item.time)
-                        .font(.caption)
+        let sort = reverse-index
+        
+        return
+            VStack(alignment: .center) {
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading, spacing: 10.0){
+                        Text(item.title)
+                            .font(.system(size: 30, weight: .bold))
+                            .foregroundColor(Color.white)
+                            .lineLimit(2)
+                            .font(.caption)
+                        Text(item.time)
+                            .font(.caption)
+                    }
+                    Spacer()
+                    Image(item.icon)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 32, height: 32)
                 }
-                Spacer()
-                Image(item.icon)
+                Image(item.background)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 32, height: 32)
+                    .frame(width: 150, height: 100)
+                
             }
-            Image(item.background)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 100)
-            
-        }
-        .padding(.horizontal)
-        .frame(width: 340, height: 220)
-        .background(Color(color))
-        .cornerRadius(25)
-        .shadow(color: Color(color).opacity(0.3), radius: 20, x: 0, y: 20)
-        .rotationEffect(.degrees(moveFlag ? 0 : Double((reverse-index) * 5)))
-        .offset(y: CGFloat(moveFlag ? -230 * (reverse-index) : -20 * (reverse-index)))
-        .offset(x:viewState.width,y: viewState.height)
-        .animation(.spring())
+            .padding(.horizontal)
+            .frame(width: 340, height: 220)
+            .background(Color(color))
+            .cornerRadius(25)
+            .shadow(color: Color(color).opacity(0.3), radius: 20, x: 0, y: 20)
+            .rotationEffect(.degrees(moveFlag ? 0 : Double((reverse-index) * 5)))
+            .rotation3DEffect(
+                .degrees(moveFlag ? Double(5 * sort) : 0),
+                axis: (x: 1.0, y: 0.0, z: 0.0)
+            )
+            .offset(y: CGFloat(moveFlag ? -230 * (reverse-index) : -20 * (reverse-index)))
+            .offset(x:viewState.width,y: viewState.height)
+            .animation(.spring())
         
     }
+
 }
 
-struct Card_Previews: PreviewProvider {
-    static var previews: some View {
-        Card(item: defaultItems[0],color: colors[0],reverse: 0,index: 0,viewState: .constant(.zero),moveFlag: .constant(false))
-    }
-}
+

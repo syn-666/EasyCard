@@ -11,7 +11,7 @@ import SwiftUI
 struct EasyCardApp: App {
     var body: some Scene {
         WindowGroup {
-            Main()
+            CardList().environmentObject(UserData())
 //            Card(item: .constant(defaultItems[2]))
         }
     }

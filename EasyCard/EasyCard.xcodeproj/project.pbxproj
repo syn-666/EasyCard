@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D855FF9526285FF600B63F81 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855FF9426285FF600B63F81 /* CardItem.swift */; };
+		D855FF98262867EA00B63F81 /* WatchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855FF97262867EA00B63F81 /* WatchCard.swift */; };
 		D86F16932626DA9800F97E98 /* EasyCardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16922626DA9800F97E98 /* EasyCardApp.swift */; };
 		D86F16952626DA9800F97E98 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16942626DA9800F97E98 /* Main.swift */; };
 		D86F16972626DA9900F97E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86F16962626DA9900F97E98 /* Assets.xcassets */; };
@@ -16,9 +18,14 @@
 		D86F16B32626E86C00F97E98 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16B22626E86C00F97E98 /* Card.swift */; };
 		D86F16B7262744AB00F97E98 /* UserDefaultPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16B6262744AB00F97E98 /* UserDefaultPlus.swift */; };
 		D86F16BC2627565B00F97E98 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F16BB2627565B00F97E98 /* CardList.swift */; };
+		D884654D2629512D00D3144B /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884654C2629512D00D3144B /* EditView.swift */; };
+		D884655126298CF400D3144B /* CardPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884655026298CF400D3144B /* CardPreview.swift */; };
+		D8CA90D9262D76E1004A8CD5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CA90D8262D76E1004A8CD5 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D855FF9426285FF600B63F81 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		D855FF97262867EA00B63F81 /* WatchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCard.swift; sourceTree = "<group>"; };
 		D86F168F2626DA9800F97E98 /* EasyCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86F16922626DA9800F97E98 /* EasyCardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyCardApp.swift; sourceTree = "<group>"; };
 		D86F16942626DA9800F97E98 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -30,6 +37,9 @@
 		D86F16B22626E86C00F97E98 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D86F16B6262744AB00F97E98 /* UserDefaultPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPlus.swift; sourceTree = "<group>"; };
 		D86F16BB2627565B00F97E98 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
+		D884654C2629512D00D3144B /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		D884655026298CF400D3144B /* CardPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreview.swift; sourceTree = "<group>"; };
+		D8CA90D8262D76E1004A8CD5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 				D86F16922626DA9800F97E98 /* EasyCardApp.swift */,
 				D86F16942626DA9800F97E98 /* Main.swift */,
 				D86F16962626DA9900F97E98 /* Assets.xcassets */,
+				D8CA90D8262D76E1004A8CD5 /* Launch Screen.storyboard */,
 				D86F169B2626DA9900F97E98 /* Info.plist */,
 				D86F16982626DA9900F97E98 /* Preview Content */,
 			);
@@ -87,6 +98,10 @@
 			children = (
 				D86F16B22626E86C00F97E98 /* Card.swift */,
 				D86F16BB2627565B00F97E98 /* CardList.swift */,
+				D855FF9426285FF600B63F81 /* CardItem.swift */,
+				D855FF97262867EA00B63F81 /* WatchCard.swift */,
+				D884654C2629512D00D3144B /* EditView.swift */,
+				D884655026298CF400D3144B /* CardPreview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CA90D9262D76E1004A8CD5 /* Launch Screen.storyboard in Resources */,
 				D86F169A2626DA9900F97E98 /* Preview Assets.xcassets in Resources */,
 				D86F16972626DA9900F97E98 /* Assets.xcassets in Resources */,
 			);
@@ -179,9 +195,13 @@
 			files = (
 				D86F16B02626E60200F97E98 /* Global.swift in Sources */,
 				D86F16AA2626E23E00F97E98 /* Item.swift in Sources */,
+				D855FF9526285FF600B63F81 /* CardItem.swift in Sources */,
 				D86F16B7262744AB00F97E98 /* UserDefaultPlus.swift in Sources */,
 				D86F16B32626E86C00F97E98 /* Card.swift in Sources */,
+				D884655126298CF400D3144B /* CardPreview.swift in Sources */,
 				D86F16952626DA9800F97E98 /* Main.swift in Sources */,
+				D884654D2629512D00D3144B /* EditView.swift in Sources */,
+				D855FF98262867EA00B63F81 /* WatchCard.swift in Sources */,
 				D86F16932626DA9800F97E98 /* EasyCardApp.swift in Sources */,
 				D86F16BC2627565B00F97E98 /* CardList.swift in Sources */,
 			);
